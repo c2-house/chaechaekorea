@@ -1,8 +1,8 @@
 export const host =
-  process.env.NODE_ENV === 'production' ? 'https://example.com' : 'http://localhost:3000';
+  process.env.NODE_ENV === 'production' ? 'https://chaechaekorea.com' : 'http://localhost:3000';
 
 export const defaultMetadata = {
-  title: 'My Blog',
+  title: 'ChaeChae Korea',
   description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sapiente numquam ipsum',
+    'Explore Korea through the eyes of locals! Get authentic insights on travel, cuisine, daily life, and the vibrant culture of Korea.',
 };
