@@ -30,7 +30,7 @@ export const generateMetadata = async (
       type: 'article',
       publishedTime: date,
       tags: post.category,
-      authors: 'My Name',
+      authors: 'ChaeChae Korea',
       images: [image, ...previousImages],
     },
     twitter: {

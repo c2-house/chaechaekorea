@@ -25,7 +25,7 @@ export const generateMetadata = async (
       url: `/category/${categoryName}`,
       siteName: defaultTitle,
       type: 'website',
-      images: previousImages,
+      images: [`/images/cover/${categoryName}.jpg`, ...previousImages],
     },
     twitter: {
       title: ogTitle,

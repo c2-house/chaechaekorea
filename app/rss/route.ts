@@ -23,7 +23,7 @@ export async function GET() {
       url: `${host}/${post.slug}`,
       date: post.date,
       categories: [post.category],
-      author: 'My Name',
+      author: 'ChaeChae Korea',
     });
   });
 

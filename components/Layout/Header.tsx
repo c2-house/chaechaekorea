@@ -20,7 +20,7 @@ const Header = () => {
         <div className={clsx('container-xl py-3 md:py-5', { 'text-white': isHome })}>
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold md:text-2xl">
-              My Blog
+              ChaeChae Korea
             </Link>
 
             <nav className="hidden lg:block">
