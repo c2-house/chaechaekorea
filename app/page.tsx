@@ -13,7 +13,7 @@ const Home = () => {
             src="/images/cover/main-01.jpg"
             alt="ChaeChae Korea - Home"
             width={1920}
-            height={1280}
+            height={1080}
             sizes="100vw"
             className="h-full w-full object-cover"
             priority
