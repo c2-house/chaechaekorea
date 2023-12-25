@@ -7,7 +7,7 @@ const PostListItem = ({ post }: { post: Post }) => {
   return (
     <li>
       <article>
-        <Link href={`/${post.slug}`} className="overflow-hidden">
+        <Link href={`/${post.slug}`} className="block aspect-video w-full overflow-hidden">
           <Image
             src={post.image}
             alt={post.title}

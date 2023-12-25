@@ -24,9 +24,8 @@ const CategoryPage = ({ params: { categoryName } }: Props) => {
             <Image
               src={`/images/cover/${categoryName}.jpg`}
               alt={`ChaeChae Korea - ${categoryName}`}
-              width={1280}
-              height={853}
-              sizes="(max-width: 1280px) 100vw, 1216px"
+              width={1216}
+              height={400}
               className="h-full w-full object-cover"
               priority
             />
