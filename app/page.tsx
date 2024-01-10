@@ -7,30 +7,30 @@ const Home = () => {
 
   return (
     <main>
-      <section className="relative flex h-[50vh] items-center justify-center bg-black/60 pt-14 md:pt-[72px]">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+      <section className="mx-auto max-w-screen-xl">
+        <div className="h-[50dvh] overflow-hidden rounded-b-3xl md:rounded-b-[36px] lg:rounded-b-[48px]">
           <Image
             src="/images/cover/main-01.jpg"
-            alt="ChaeChae Korea - Home"
-            width={1920}
-            height={1080}
-            sizes="100vw"
+            alt="ChaeChae Korea Cover Image"
+            width={1280}
+            height={720}
             className="h-full w-full object-cover"
             priority
           />
         </div>
-        <div className="px-6 text-center text-white">
-          <h1 className="mb-3 text-3xl font-semibold sm:mb-6 md:text-4xl lg:text-5xl">
-            Discover the Authentic Korea
+        <div className="container-xl flex flex-col justify-between gap-x-8 gap-y-6 py-8 sm:flex-row">
+          <h1 className="flex-2 whitespace-pre-line text-5xl font-semibold md:text-7xl lg:text-8xl">
+            {`Discover the\nAuthentic Korea`}
           </h1>
-          <p className="text-md md:text-lg lg:text-xl">
-            Explore Korea through the eyes of locals! <br className="hidden sm:inline" />
-            Get authentic insights on travel, cuisine, daily life, and vibrant culture of Korea.
+          <p className="min-w-[200px] max-w-[400px] flex-1 text-gray-700 md:text-lg lg:text-xl">
+            Explore Korea through the eyes of locals! Get authentic insights on travel, cuisine,
+            daily life, and vibrant culture of Korea.
           </p>
         </div>
       </section>
 
       <section className="container-xl py-10">
+        <h2 className="mb-5 text-3xl font-semibold">Recent Posts</h2>
         <PostList posts={posts} />
       </section>
     </main>
