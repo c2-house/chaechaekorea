@@ -5,7 +5,7 @@ import Mdx from '../Mdx';
 
 const Post = ({ post }: { post: Post }) => {
   return (
-    <article className="prose mx-auto py-10 lg:prose-lg prose-figcaption:text-sm">
+    <article className="prose mx-auto max-w-[730px] py-4 lg:prose-lg prose-figcaption:text-sm md:py-6">
       <header>
         <div className="mb-4">
           <Link

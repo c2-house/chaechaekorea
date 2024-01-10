@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="container-xl py-10">
+      <section className="container-xl pt-16">
         <h2 className="mb-5 text-3xl font-semibold">Recent Posts</h2>
         <PostList posts={posts} />
       </section>
