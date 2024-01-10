@@ -7,7 +7,6 @@ const robots = (): MetadataRoute.Robots => {
       allow: '/',
     },
     sitemap: 'https://chaechaekorea.com/sitemap.xml',
-    host: 'https://chaechaekorea.com',
   };
 };
 

@@ -14,7 +14,9 @@ export const generateStaticParams = async () => {
 };
 
 const CategoryPage = ({ params: { categoryName } }: Props) => {
-  const posts = allPosts.filter((post) => post.category === categoryName);
+  const posts = allPosts
+    .filter((post) => post.category === categoryName)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <main>

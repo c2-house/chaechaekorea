@@ -26,7 +26,7 @@ export const generateMetadata = async (
       title,
       description,
       url: `/${slug}`,
-      siteName: title,
+      siteName: 'ChaeChae Korea',
       type: 'article',
       publishedTime: date,
       tags: post.category,

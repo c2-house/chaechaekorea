@@ -1,5 +1,5 @@
 import { Metadata, ResolvingMetadata } from 'next';
-import { defaultMetadata } from '@/constants/metadata';
+import { title, description, openGraph } from '@/app/shared-metadata';
 
 interface Props {
   params: {
@@ -11,20 +11,18 @@ export const generateMetadata = async (
   { params: { categoryName } }: Props,
   parent: ResolvingMetadata,
 ): Promise<Metadata> => {
-  const { title: defaultTitle, description } = defaultMetadata;
-  const title = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
-  const ogTitle = `${title} | ${defaultTitle}`;
+  const category = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+  const ogTitle = `${category} | ${title}`;
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
-    title,
+    title: category,
     description,
     openGraph: {
+      ...openGraph,
       title: ogTitle,
       description,
       url: `/category/${categoryName}`,
-      siteName: defaultTitle,
-      type: 'website',
       images: [`/images/cover/${categoryName}.jpg`, ...previousImages],
     },
     twitter: {
