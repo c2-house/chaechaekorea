@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { categories } from '@/constants/category';
@@ -11,13 +11,34 @@ import Drawer from './Drawer';
 
 const Header = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const pathname = usePathname();
   const isHome = pathname === '/';
 
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className={clsx({ 'absolute left-0 top-0 z-10 w-full': isHome })}>
-        <div className={clsx('container-xl py-3 md:py-5', { 'text-white': isHome })}>
+      <header
+        className={clsx(
+          'inset-x-0 top-0 z-10 w-full transition-colors duration-300',
+          isHome ? 'fixed' : 'sticky',
+          {
+            'bg-transparent': isHome && scrollY <= 0,
+            'border-b border-gray-100 bg-white/70 backdrop-blur-lg': scrollY > 0,
+          },
+        )}
+      >
+        <div
+          className={clsx('container-xl py-3 md:py-5', { 'text-white': isHome && scrollY <= 0 })}
+        >
           <div className="flex items-center justify-between">
             <Link href="/" className="text-xl font-bold md:text-2xl">
               ChaeChae Korea

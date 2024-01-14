@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main>
       <section className="mx-auto max-w-screen-xl">
-        <div className="h-[50dvh] overflow-hidden rounded-b-3xl md:rounded-b-[36px] lg:rounded-b-[48px]">
+        <div className="h-[50svh] overflow-hidden rounded-b-3xl md:rounded-b-[36px] lg:rounded-b-[48px]">
           <Image
             src="/images/cover/main-01.jpg"
             alt="ChaeChae Korea Cover Image"
