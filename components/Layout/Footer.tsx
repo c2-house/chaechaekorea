@@ -10,7 +10,7 @@ const Footer = () => {
             <Logo className="h-8 w-8" />
             <span className="ml-2 text-xl font-semibold text-gray-900">ChaeChae Korea</span>
           </div>
-          <p className="">&copy; {new Date().getFullYear()} ChaeChae. All Rights Reserved.</p>
+          <p className="">&copy; 2023. ChaeChae Life. All rights reserved.</p>
         </div>
 
         <div className="flex flex-col justify-between gap-6 leading-normal sm:flex-row lg:flex-1">
